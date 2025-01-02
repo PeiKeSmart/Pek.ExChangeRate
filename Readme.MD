@@ -1,3 +1,3 @@
-﻿# Pek.Mail - 邮件操作类库
+﻿# Pek.ExChangeRate - 汇率类库
 
-用于DH框架的邮件操作类库
+用于DH框架的汇率类库
