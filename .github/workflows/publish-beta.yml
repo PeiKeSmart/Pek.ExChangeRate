@@ -4,11 +4,13 @@ on:
   push:
     branches: [ main ]
     paths:
-        - 'Pek.ExChangeRate/**'
+        - 'Pek.Mail/**'
+        - 'Pek.Mail.Extensions/**'
   pull_request:
     branches: [ main ]
     paths:
-        - 'Pek.ExChangeRate/**'
+        - 'Pek.Mail/**'
+        - 'Pek.Mail.Extensions/**'
   workflow_dispatch:
 
 jobs:
@@ -30,7 +32,8 @@ jobs:
         dotnet build -c Release --version-suffix ${{ env.VERSION }}
     - name: Pack
       run: |
-        dotnet pack --no-build --version-suffix ${{ env.VERSION }} -c Release -o out Pek.ExChangeRate/Pek.ExChangeRate.csproj
+        dotnet pack --no-build --version-suffix ${{ env.VERSION }} -c Release -o out Pek.Mail/Pek.Mail.csproj
+        dotnet pack --no-build --version-suffix ${{ env.VERSION }} -c Release -o out Pek.Mail.Extensions/Pek.Mail.Extensions.csproj
 
     - name: Publish
       run: |
