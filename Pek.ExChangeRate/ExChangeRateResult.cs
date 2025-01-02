@@ -57,5 +57,5 @@ public class ExChangeRateResult
     /// 键为货币代码，值为对应的转换率。
     /// </summary>
     [JsonPropertyName("conversion_rates")]
-    public IDictionary<String, Double>? ConversionRates { get; set; }
+    public IDictionary<String, Decimal>? ConversionRates { get; set; }
 }
